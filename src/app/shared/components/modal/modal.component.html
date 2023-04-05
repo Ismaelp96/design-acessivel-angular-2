@@ -1,6 +1,6 @@
 <div class="modal">
   <div class="overlay" (click)="modalRef.close()"></div>
-  <div class="modal-content" appFocusTrap>
+  <div class="modal-content" appFocusTrap (keydown.esc)="modalRef.close()">
     <h1 class="modal-title">{{ config.title }}</h1>
     <ng-container *ngTemplateOutlet="config.templateRef"></ng-container>
   </div>
