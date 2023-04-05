@@ -7,5 +7,5 @@ import { ModalConfig } from './interfaces/modal-config';
   styleUrls: ['./modal.component.scss'],
 })
 export class ModalComponent {
-  config!: ModalConfig;
+  public config!: ModalConfig;
 }
