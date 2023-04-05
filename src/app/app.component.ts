@@ -1,19 +1,14 @@
-import {
-  Component,
-  TemplateRef,
-  ViewChild,
-  ViewContainerRef,
-} from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
 
-import {
-  ModalRef,
-  ModalService,
-} from './shared/components/modal/services/modal.service';
+import { ModalService } from './shared/components/modal/services/modal.service';
+import { fade } from './shared/animations/fade';
+import { ModalRef } from './shared/components/modal/models/modal-ref';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  animations: [fade],
 })
 export class AppComponent {
   @ViewChild('modal')
@@ -21,6 +16,7 @@ export class AppComponent {
   title = 'design-acessivel-angular-2';
   firstName: string = 'Ismael';
   modalRef!: ModalRef;
+  info = false;
 
   constructor(private modalService: ModalService) {}
 

@@ -35,6 +35,8 @@ body {
 }
 
 .form-field {
+  width: 100%;
+  max-width: 300px;
   margin-bottom: 1rem;
   label {
     display: block;
