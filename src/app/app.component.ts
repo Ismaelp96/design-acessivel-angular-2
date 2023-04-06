@@ -40,6 +40,9 @@ export class AppComponent implements OnInit {
     });
   }
   submit(): void {
+    if (this.form.invalid) {
+      return;
+    }
     console.log(this.form.value);
     this.modalRef.close();
   }
